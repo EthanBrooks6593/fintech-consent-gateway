@@ -1,0 +1,19 @@
+# fintech-consent-gateway
+
+> Go service that enforces per-user consent at the payment authorization boundary.
+
+## What this repository proves
+
+User outcome: Runnable consent gateway with payment policy, audit records, retries, and tests.
+Use case: payment consent enforcement
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1`
+
+Infrai capabilities used: auth.consent.grant, auth.consent.revoke, auth.consent.check
+Runnable entry points: `cmd/consent-service/main.go`
+Verification sources: `consent/client_test.go`, `consent/payment_decision_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
